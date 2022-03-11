@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hi, welcome to your profile homepage.</h1>
+<h2>Make a post</h2>
+
+<form action="/add-post" method="post">
+    <div th:text="${utente.id}"></div>
+    <input type="hidden" name="utenteId" th:value="${utente.id}">
+    <label> Post Title
+        <input type="text" name="title">
+    </label>
+    <label> Post Body
+        <input type="text" name="body">
+    </label>
+    <input type="submit">Post
+</form>
+</body>
+</html>
